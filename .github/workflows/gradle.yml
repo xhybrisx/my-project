@@ -46,7 +46,16 @@ jobs:
     #
     # - name: Build with Gradle 8.5
     #   run: gradle build
-
+    - name: Build & push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v6
+      
+      with:
+        image: myroot/demo-app
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+    
+    
   dependency-submission:
 
     runs-on: ubuntu-latest
