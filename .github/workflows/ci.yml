@@ -29,8 +29,8 @@ jobs:
     - name: Set up JDK 8.0.402+6
       uses: actions/setup-java@v4
       with:
-        java-version: '21.0.2_13-jdk'
-        distribution: 'temurin'
+        java-version: '21'
+        distribution: 'eclipse-temurin'
 
     # Configure Gradle for optimal use in GiHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
@@ -71,8 +71,8 @@ jobs:
     - name: Set up JDK 8.0.402+6
       uses: actions/setup-java@v4
       with:
-        java-version: '21.0.2_13-jdk'
-        distribution: 'temurin'
+        java-version: '21'
+        distribution: 'eclipse-temurin'
 
     # Generates and submits a dependency graph, enabling Dependabot Alerts for all project dependencies.
     # See: https://github.com/gradle/actions/blob/main/dependency-submission/README.md
